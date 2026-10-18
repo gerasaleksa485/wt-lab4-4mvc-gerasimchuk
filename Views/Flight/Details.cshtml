@@ -1,0 +1,26 @@
+@model wt_lab4_4mvc_gerasimchuk.Models.Flight
+@{ ViewData["Title"] = "Детали рейса"; }
+
+<div class="container py-4">
+    <div class="card shadow-sm rounded-4">
+        <div class="card-body">
+            <h2 class="mb-3">Рейс @Model.FlightNumber</h2>
+            <dl class="row">
+                <dt class="col-sm-3">ID</dt><dd class="col-sm-9">@Model.Id</dd>
+                <dt class="col-sm-3">Город вылета</dt><dd class="col-sm-9">@Model.DepartureCity</dd>
+                <dt class="col-sm-3">Город прилёта</dt><dd class="col-sm-9">@Model.ArrivalCity</dd>
+                <dt class="col-sm-3">Время вылета</dt><dd class="col-sm-9">@Model.DepartureTime.ToString("dd.MM.yyyy HH:mm")</dd>
+                <dt class="col-sm-3">Время прилёта</dt><dd class="col-sm-9">@Model.ArrivalTime.ToString("dd.MM.yyyy HH:mm")</dd>
+                <dt class="col-sm-3">Цена</dt><dd class="col-sm-9">@Model.Price ₽</dd>
+                <dt class="col-sm-3">Тип самолёта</dt><dd class="col-sm-9">@Model.AircraftType</dd>
+                <dt class="col-sm-3">Статус</dt>
+                <dd class="col-sm-9">
+                    @if (Model.IsAvailable) { <span class="badge bg-success">Доступен</span> }
+                    else { <span class="badge bg-danger">Нет мест</span> }
+                </dd>
+            </dl>
+            <a asp-action="Index" class="btn btn-secondary">Назад к списку</a>
+            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Редактировать</a>
+        </div>
+    </div>
+</div>
