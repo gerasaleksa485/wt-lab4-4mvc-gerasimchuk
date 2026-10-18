@@ -1,7 +1,7 @@
 # WT-4 ASP.NET Core MVC — Авиакомпания SkyLine
 
 ## Репозиторий
-<ссылка на ваш GitHub>
+https://github.com/gerasaleksa485/wt-lab4-4mvc-gerasimchuk.git
 
 ## Опубликованное приложение
-https://имя-приложения.onrender.com
+https://skyline-airlines-nako.onrender.com
